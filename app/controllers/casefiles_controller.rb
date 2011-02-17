@@ -3,6 +3,7 @@ class CasefilesController < ApplicationController
   # GET /casefiles.xml
   def index
     @casefiles = Casefile.all
+    @casefiles = Casefile.where("doctor_id = ?", params[:doctor_id]) if params[:doctor_id]
 
     respond_to do |format|
       format.html # index.html.erb

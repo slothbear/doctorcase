@@ -1,7 +1,10 @@
 Doctorcase::Application.routes.draw do
   resources :casefiles
 
-  resources :doctors
+  resources :doctors do
+    resources :casefiles
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

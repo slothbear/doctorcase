@@ -10,9 +10,8 @@
 <br/>
 <strong>View index of my 
 <%= @doctor.casefiles.size %>
-<%= link_to "casefiles", casefiles_path %>
+<%= link_to "casefiles", doctor_casefiles_path(@doctor) %>
 <br/>
---- this link doesn't work yet -- it links to all casefiles instead of just this doctor's casefiles ---
 </strong><br/>
 <br/>
 <br/>

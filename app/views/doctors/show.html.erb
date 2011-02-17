@@ -6,5 +6,15 @@
 </p>
 
 
+<br/>
+<br/>
+<strong>View index of my 
+<%= @doctor.casefiles.size %>
+<%= link_to "casefiles", casefiles_path %>
+</strong><br/>
+<br/>
+<br/>
+<br/>
+<hr/>
 <%= link_to 'Edit', edit_doctor_path(@doctor) %> |
 <%= link_to 'Back', doctors_path %>

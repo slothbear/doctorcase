@@ -27,7 +27,7 @@
 
 <p/>
 <div style="background:lightblue">rating via radio_button_<strong>tag</strong></div>
-<% @rx = params[:rating_tag] || @casefile.rating_tag.to_s %>
+<% @rx = @casefile.rating_tag.to_s %>
   <%= radio_button_tag :rating_tag, "1", @rx == "1" %>1
   <%= radio_button_tag :rating_tag, "2", @rx == "2" %>2
   <%= radio_button_tag :rating_tag, "3", @rx == "3" %>3

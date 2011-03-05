@@ -11,5 +11,33 @@
 </p>
 
 
+<div style="background:lightgreen";>
+  RATING via radio_button:
+<%= @casefile.rating %>
+<p/>
+</div>
+
+<div style="background:lightblue";>
+  RATING via radio_button_<strong>tag</strong>:
+<%= @casefile.rating_tag %>
+<p/>
+</div>
+<!-- <div>
+  <label> 
+    <input id="rating_1" name="rating" type="radio" value="1" /> 
+    1
+  </label> 
+  <label> 
+    <input id="rating_2" name="rating" type="radio" value="2" /> 
+    2
+  </label> 
+  <label> 
+    <input id="rating_3" name="rating" type="radio" value="3" /> 
+    3
+  </label>
+</div>
+<br/> -->
+
+
 <%= link_to 'Edit', edit_casefile_path(@casefile) %> |
 <%= link_to 'Back', casefiles_path %>

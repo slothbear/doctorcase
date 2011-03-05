@@ -36,12 +36,14 @@ class CasefilesController < ApplicationController
   # GET /casefiles/1/edit
   def edit
     @casefile = Casefile.find(params[:id])
+    @casefile.rating_tag = params[:rating_tag] if params[:rating_tag]
   end
 
   # POST /casefiles
   # POST /casefiles.xml
   def create
     @casefile = Casefile.new(params[:casefile])
+    @casefile.rating_tag = params[:rating_tag] if params[:rating_tag]
 
     respond_to do |format|
       if @casefile.save

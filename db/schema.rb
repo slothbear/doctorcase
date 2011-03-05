@@ -10,13 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110217192656) do
+ActiveRecord::Schema.define(:version => 20110305140754) do
 
   create_table "casefiles", :force => true do |t|
     t.string   "name"
     t.integer  "doctor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "rating"
+    t.integer  "rating_tag"
   end
 
   create_table "doctors", :force => true do |t|

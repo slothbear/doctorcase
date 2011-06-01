@@ -1,3 +1,10 @@
+<script type="text/javascript" charset="utf-8">
+  $(document).ready( function(){
+    $('#casefile_doctor').autocomplete('/doctors.js');
+  });
+
+</script>
+
 <%= form_for(@casefile) do |f| %>
   <% if @casefile.errors.any? %>
     <div id="error_explanation">
@@ -15,10 +22,9 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :doctor%><br />
-    <%= f.collection_select(:doctor_id, Doctor.all, :id, :name, :prompt => "select doctor") %>
-  </div>
+
+  <%= f.label :doctor %>
+  <%= f.text_field :doctor %>
 
 <div style="background:lightgreen">rating via radio_button</div>
   <%= f.radio_button :rating, "1" %>1

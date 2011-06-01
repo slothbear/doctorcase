@@ -2,11 +2,17 @@ class DoctorsController < ApplicationController
   # GET /doctors
   # GET /doctors.xml
   def index
-    @doctors = Doctor.all
+    if params[:q]
+      @doctors = Doctor.all(:conditions => ["name like ?", '%' + params[:q] + '%'])
+    else
+      @doctors = Doctor.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @doctors }
+      format.js
+      format.json
     end
   end
 

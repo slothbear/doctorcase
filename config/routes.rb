@@ -1,4 +1,6 @@
 Doctorcase::Application.routes.draw do
+  resources :radios
+
   resources :casefiles
 
   resources :doctors do

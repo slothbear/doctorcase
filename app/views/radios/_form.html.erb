@@ -1,24 +1,43 @@
 <%= form_for(@radio) do |f| %>
-  <% if @radio.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@radio.errors.count, "error") %> prohibited this radio from being saved:</h2>
 
-      <ul>
-      <% @radio.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <label for="radio_rating">rate the radio</label> 
+  <br> 
+  <div class="stars"> 
+    <label> 
+      <input id="radio_rating_1" name="radio[rating]" type="radio" value="1" /> 
+      1
+    </label> 
+    <label> 
+      <input id="radio_rating_2" name="radio[rating]" type="radio" value="2" /> 
+      2
+    </label>
+  </div> 
 
-  <div class="field">
-    <%= f.label :rating %><br />
-    <%= f.radio_button :rating, 1 %>1
-    <%= f.radio_button :rating, 2 %>2
-    <%= f.radio_button :rating, 3 %>3
+
+  <!-- <span>
+    <label for="radio_watts">how many watts?</label>
+  </span> 
+  <br> 
+  <div class="stars"> 
+    <label style="display:none;"> 
+      <span>
+        <input id="radio_watts_1" name="radio[watts]" type="radio" value="5" />
+      </span> 
+      5
+    </label> 
+    <label style="display:none;"> 
+      <span>
+        <input id="radio_watts_2" name="radio[watts]" type="radio" value="250" />
+      </span> 
+      250
+    </label> 
   </div>
-  
+  <a href="#" title="">
+    
+  </a><a href="#" title=""></a><a href="#" title=""></a><a href="#" title=""></a><a href="#" title=""></a>
+   -->
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
